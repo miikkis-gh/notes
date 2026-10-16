@@ -1,12 +1,30 @@
 # notes
 
-Study handbook (content in Finnish), built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
-and published at <https://i.miikkis.fi> via GitHub Pages (`.github/workflows/deploy.yml`).
+Built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
-Local preview:
+## Setup
 
-    python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-    .venv/bin/mkdocs serve
+    python3 -m venv .venv
+    .venv/bin/pip install -r requirements.txt
 
-New course page: copy `TEMPLATE.md` to `docs/courses/<code>.md`, add it to `nav` in `mkdocs.yml`.
-Summarise in your own words and link to course material rather than re-hosting it.
+`requirements.txt` pins the `mkdocs-material` version, which pulls in MkDocs itself.
+
+## Commands
+
+- `.venv/bin/mkdocs serve`: local preview at <http://127.0.0.1:8000> that reloads on save
+- `.venv/bin/mkdocs build --strict`: builds the site into `site/` and fails on warnings such as broken links
+
+## Layout
+
+- `mkdocs.yml`: site settings, theme, Markdown extensions and the `nav` menu
+- `docs/`: the pages, one Markdown file per page (a page appears in the menu only once it's listed under `nav`)
+- `docs/CNAME`: custom domain, copied into the built site
+
+## Deploy
+
+`.github/workflows/deploy.yml` runs `mkdocs build --strict` on every push to `main` and publishes `site/` to GitHub Pages.
+
+## Docs
+
+- MkDocs: <https://www.mkdocs.org/user-guide/>
+- Material for MkDocs: <https://squidfunk.github.io/mkdocs-material/reference/>
