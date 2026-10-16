@@ -1,11 +1,11 @@
-# COURSE-CODE — Course name
+# KURSSIKOODI — Kurssin nimi
 
-**Credits:** · **Period:** · **Course page:** <link>
+**Opintopisteet:** · **Periodi:** · **Kurssisivu:** <linkki>
 
-## Summary
+## Tiivistelmä
 
-## Key concepts
+## Keskeiset käsitteet
 
-## Exam & assignments
+## Tentti ja tehtävät
 
-## Links
+## Linkit

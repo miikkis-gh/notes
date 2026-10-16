@@ -1,10 +1,10 @@
-# Notes
+# Muistiinpanot
 
-A study handbook: course summaries, key concepts and useful links.
+Opiskelun käsikirja: kurssien tiivistelmiä, keskeisiä käsitteitä ja hyödyllisiä linkkejä.
 
-- **[Courses](courses/index.md)** — one page per course
-- **[Glossary](glossary.md)** — terms in one place
+- **[Kurssit](courses/index.md)** — oma sivu jokaiselle kurssille
+- **[Sanasto](glossary.md)** — käsitteet yhdessä paikassa
 
-!!! note
-    These are personal study notes, not official course material. Always check
-    the course's own pages for deadlines and requirements.
+!!! note "Huomio"
+    Nämä ovat henkilökohtaisia opiskelumuistiinpanoja, eivät virallista kurssimateriaalia.
+    Tarkista määräajat ja vaatimukset aina kurssin omilta sivuilta.

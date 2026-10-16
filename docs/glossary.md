@@ -1,5 +1,5 @@
-# Glossary
+# Sanasto
 
-| Term | Meaning |
-|------|---------|
-|      |         |
+| Käsite | Merkitys |
+|--------|----------|
+|        |          |

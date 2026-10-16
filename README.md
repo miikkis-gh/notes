@@ -1,6 +1,6 @@
 # notes
 
-Study handbook, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
+Study handbook (content in Finnish), built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/)
 and published at <https://i.miikkis.fi> via GitHub Pages (`.github/workflows/deploy.yml`).
 
 Local preview:

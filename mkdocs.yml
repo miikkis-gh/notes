@@ -1,11 +1,11 @@
-site_name: Notes
+site_name: Muistiinpanot
 site_url: https://i.miikkis.fi/
-site_description: Study handbook
-copyright: Content &copy; miikkis — CC BY-SA 4.0
+site_description: Opiskelun käsikirja
+copyright: Sisältö &copy; miikkis — CC BY-SA 4.0
 
 theme:
   name: material
-  language: en
+  language: fi
   features:
     - navigation.sections
     - navigation.top
@@ -16,12 +16,12 @@ theme:
       scheme: default
       toggle:
         icon: material/brightness-7
-        name: Dark mode
+        name: Tumma tila
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
         icon: material/brightness-4
-        name: Light mode
+        name: Vaalea tila
 
 markdown_extensions:
   - admonition
@@ -38,7 +38,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 
 nav:
-  - Home: index.md
-  - Courses:
+  - Etusivu: index.md
+  - Kurssit:
       - courses/index.md
-  - Glossary: glossary.md
+  - Sanasto: glossary.md
