@@ -16,8 +16,8 @@ Built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https
 
 ## Layout
 
-- `mkdocs.yml`: site settings, theme, Markdown extensions and the `nav` menu
-- `docs/`: the pages, one Markdown file per page (a page appears in the menu only once it's listed under `nav`)
+- `mkdocs.yml`: site settings, theme and Markdown extensions
+- `docs/`: the pages, one Markdown file per page; with no `nav` in `mkdocs.yml`, every page appears in the menu automatically (subfolders become sections)
 - `docs/CNAME`: custom domain, copied into the built site
 
 ## Deploy

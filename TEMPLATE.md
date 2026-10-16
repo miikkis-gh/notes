@@ -1,11 +1,7 @@
-# KURSSIKOODI — Kurssin nimi
+# Otsikko
 
-**Opintopisteet:** · **Periodi:** · **Kurssisivu:** <linkki>
+Lyhyt kuvaus siitä, mitä tämä sivu käsittelee.
 
-## Tiivistelmä
-
-## Keskeiset käsitteet
-
-## Tentti ja tehtävät
+## Sisältö
 
 ## Linkit

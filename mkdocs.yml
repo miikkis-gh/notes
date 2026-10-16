@@ -1,6 +1,6 @@
 site_name: Muistiinpanot
 site_url: https://i.miikkis.fi/
-site_description: Opiskelun käsikirja
+site_description: Muistiinpanoja jaettavaksi
 copyright: Sisältö &copy; miikkis — CC BY-SA 4.0
 
 theme:
@@ -37,8 +37,3 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 
-nav:
-  - Etusivu: index.md
-  - Kurssit:
-      - courses/index.md
-  - Sanasto: glossary.md
