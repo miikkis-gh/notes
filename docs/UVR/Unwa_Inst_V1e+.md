@@ -2,6 +2,16 @@
 
 Inst V1e+ on unwan Mel-Band Roformer -instrumentaalimalli. Se on viritetty säilyttämään instrumentaali mahdollisimman täyteläisenä (*fullness*), ja hintana on hieman taustakohinaa. Siksi se sopii hyvin elektroniseen musiikkiin, jossa syntikkaliidit ja padit menevät samalle taajuusalueelle kuin laulu.
 
+## Miksi käytän V1e+-mallia laulun erotteluun
+
+Kun tarvitsen kappaleesta pelkän instrumentaaliversion esimerkiksi DJ-editiä tai remixiä varten, laulu pitää erottaa valmiista miksauksesta. Käytän siihen ilmaista Ultimate Vocal Remover -ohjelmaa. Varsinaisen työn tekee ohjelman sisällä toimiva tekoälymalli, joka on opetettu tunnistamaan, mikä osa äänestä on laulua ja mikä soittimia.
+
+Valmiin kappaleen erottelu on vähän kuin yrittäisi poimia munat pois jo paistetusta kakusta. Kaikki on sekoittunut, ja mallin täytyy päätellä, mikä kuuluu mihinkin. Elektronisessa musiikissa tämä on erityisen vaikeaa, koska syntikat, padit ja vokooderit soivat samalla taajuusalueella kuin ihmisääni.
+
+Aiemmin käyttämäni malli on vanhempaa sukupolvea, ja uudemmat Roformer-mallit erottelevat selvästi tarkemmin. Niistä valitsin unwa-nimisen kehittäjän V1e+-mallin, koska se on viritetty säilyttämään instrumentaali mahdollisimman täyteläisenä. Varovaisemmat mallit vievät laulun mukana helposti myös syntikkaliidejä, ja jäljelle jää ohut ja tyhjän kuuloinen taustaraita. V1e+ jättää mieluummin hieman kohinaa kuin poistaa soittimia, ja tiheässä klubimiksauksessa se kohina jää kuulumattomiin.
+
+Lisäksi malli on ilmainen ja toimii omalla koneella.
+
 ---
 
 ## 1. Asenna UVR:n Roformer-beta
