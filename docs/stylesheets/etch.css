@@ -1,0 +1,365 @@
+/* Etch design system on MkDocs Material.
+   Tokens are copied from Etch's tokens.json; Material's own variables are mapped onto them.
+   Dark (slate) is Etch's default theme, Light (default scheme) its aluminium variant. */
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/Geist-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist Mono";
+  src: url("../fonts/GeistMono-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Tokens ─────────────────────────────────────────────── */
+:root {
+  --font-etch-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-etch-mono: "Geist Mono", ui-monospace, Menlo, monospace;
+  --etch-space-1: 4px;
+  --etch-space-2: 8px;
+  --etch-space-3: 12px;
+  --etch-space-4: 16px;
+  --etch-space-6: 24px;
+  --etch-space-8: 32px;
+  --etch-space-12: 48px;
+  --etch-stroke-hair: 1px;
+  --etch-stroke-edge: 1px;
+  --etch-stroke-rail: 6px;
+  --etch-stroke-frame-thin: 6px;
+  --etch-stroke-ring: 2px;
+  --etch-angle-light: 135deg;
+  --etch-duration: 120ms;
+}
+
+[data-md-color-scheme="slate"] {
+  --etch-void: #000000;
+  --etch-cell: #050505;
+  --etch-cell-hover: #0d0d0d;
+  --etch-cell-active: #171717;
+  --etch-trace-faint: #2a2a2a;
+  --etch-trace: #7a7a7a;
+  --etch-edge: #8c8c8c;
+  --etch-metal-hi: #f0f0f0;
+  --etch-metal-mid: #a3a3a3;
+  --etch-metal-lo: #5c5c5c;
+  --etch-on-metal: #0a0a0a;
+  --etch-ink: #ececec;
+  --etch-ink-muted: #a0a0a0;
+  --etch-ink-faint: #808080;
+  --etch-heat: #ffb224;
+  --etch-fault: #ff5c4d;
+  --etch-bevel: inset 1px 1px 0 #ffffff66, inset -1px -1px 0 #00000099;
+  --etch-cut: inset 0 0 0 1px #000000;
+  --etch-lift: 0 0 0 1px #2a2a2a, 0 24px 48px -8px #000000e6;
+}
+
+[data-md-color-scheme="default"] {
+  --etch-void: #ededeb;
+  --etch-cell: #f7f7f6;
+  --etch-cell-hover: #ffffff;
+  --etch-cell-active: #e4e4e2;
+  --etch-trace-faint: #d8d8d6;
+  --etch-trace: #9e9e9c;
+  --etch-edge: #6e6e6c;
+  --etch-metal-hi: #d6d6d4;
+  --etch-metal-mid: #858583;
+  --etch-metal-lo: #5e5e5c;
+  --etch-on-metal: #0a0a0a;
+  --etch-ink: #111111;
+  --etch-ink-muted: #4a4a48;
+  --etch-ink-faint: #626260;
+  --etch-heat: #8a5a00;
+  --etch-fault: #b4231a;
+  --etch-bevel: inset 1px 1px 0 #ffffffb3, inset -1px -1px 0 #0000004d;
+  --etch-cut: inset 0 0 0 1px #00000026;
+  --etch-lift: 0 0 0 1px #c9c9c7, 0 24px 48px -12px #1111112e;
+}
+
+/* ── Material variables mapped onto Etch ────────────────── */
+[data-md-color-scheme="slate"],
+[data-md-color-scheme="default"] {
+  /* gradients live here, beside the colour tokens they read */
+  --etch-metal: linear-gradient(var(--etch-angle-light), var(--etch-metal-hi) 0%, var(--etch-metal-mid) 46%, var(--etch-metal-lo) 100%);
+  --etch-plate: linear-gradient(var(--etch-angle-light), var(--etch-metal-hi) 0%, var(--etch-metal-mid) 100%);
+  --md-text-font: "Geist";
+  --md-code-font: "Geist Mono";
+
+  --md-default-bg-color: var(--etch-void);
+  --md-default-bg-color--light: var(--etch-cell);
+  --md-default-bg-color--lighter: var(--etch-cell-hover);
+  --md-default-bg-color--lightest: var(--etch-cell-active);
+  --md-default-fg-color: var(--etch-ink);
+  --md-default-fg-color--light: var(--etch-ink-muted);
+  --md-default-fg-color--lighter: var(--etch-ink-faint);
+  --md-default-fg-color--lightest: var(--etch-trace-faint);
+
+  --md-primary-fg-color: var(--etch-void);
+  --md-primary-fg-color--light: var(--etch-cell);
+  --md-primary-fg-color--dark: var(--etch-void);
+  --md-primary-bg-color: var(--etch-ink);
+  --md-primary-bg-color--light: var(--etch-ink-muted);
+  --md-accent-fg-color: var(--etch-ink);
+  --md-accent-fg-color--transparent: var(--etch-cell-active);
+  --md-accent-bg-color: var(--etch-void);
+  --md-accent-bg-color--light: var(--etch-cell);
+
+  --md-typeset-color: var(--etch-ink);
+  --md-typeset-a-color: var(--etch-ink);
+  --md-typeset-mark-color: var(--etch-cell-active);
+  --md-typeset-table-color: var(--etch-edge);
+  --md-typeset-table-color--light: var(--etch-cell-hover);
+  --md-typeset-kbd-color: var(--etch-cell-active);
+  --md-typeset-kbd-accent-color: var(--etch-edge);
+  --md-typeset-kbd-border-color: var(--etch-edge);
+
+  --md-code-fg-color: var(--etch-ink);
+  --md-code-bg-color: var(--etch-cell-active);
+  --md-code-hl-color: var(--etch-ink);
+  --md-code-hl-color--light: var(--etch-cell-hover);
+
+  /* monochrome syntax highlighting: weight and tone, no hue */
+  --md-code-hl-keyword-color: var(--etch-ink);
+  --md-code-hl-function-color: var(--etch-ink);
+  --md-code-hl-name-color: var(--etch-ink);
+  --md-code-hl-variable-color: var(--etch-ink);
+  --md-code-hl-constant-color: var(--etch-ink);
+  --md-code-hl-special-color: var(--etch-ink);
+  --md-code-hl-number-color: var(--etch-ink-muted);
+  --md-code-hl-string-color: var(--etch-ink-muted);
+  --md-code-hl-operator-color: var(--etch-ink-muted);
+  --md-code-hl-punctuation-color: var(--etch-ink-muted);
+  --md-code-hl-generic-color: var(--etch-ink-muted);
+  --md-code-hl-comment-color: var(--etch-ink-faint);
+
+  --md-admonition-fg-color: var(--etch-ink);
+  --md-admonition-bg-color: var(--etch-cell);
+
+  --md-footer-fg-color: var(--etch-ink);
+  --md-footer-fg-color--light: var(--etch-ink-muted);
+  --md-footer-fg-color--lighter: var(--etch-ink-faint);
+  --md-footer-bg-color: var(--etch-void);
+  --md-footer-bg-color--dark: var(--etch-void);
+
+  --md-shadow-z1: none;
+  --md-shadow-z2: none;
+  --md-shadow-z3: var(--etch-lift);
+}
+
+/* Nothing is rounded, ever. */
+*, *::before, *::after { border-radius: 0 !important; }
+
+body { background: var(--etch-void); color: var(--etch-ink); }
+::selection { background: var(--etch-ink); color: var(--etch-void); }
+
+/* ── Header and footer: void with a metal rail ──────────── */
+.md-header {
+  background: var(--etch-void);
+  color: var(--etch-ink);
+  box-shadow: none;
+}
+.md-header::after,
+.md-footer::before {
+  content: "";
+  display: block;
+  height: var(--etch-stroke-rail);
+  background: var(--etch-metal);
+  box-shadow: var(--etch-bevel);
+}
+.md-header__topic:first-child {
+  font-family: var(--font-etch-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.md-header__topic + .md-header__topic { font-family: var(--font-etch-sans); font-weight: 600; }
+.md-footer-meta { background: var(--etch-void); }
+.md-copyright { font-family: var(--font-etch-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--etch-ink-muted); }
+.md-copyright a { color: var(--etch-ink-muted); }
+
+/* ── Content: a thin Die — engraved strip cell, rail, content cell ── */
+.md-content {
+  align-self: flex-start;
+  margin-top: var(--etch-space-6);
+  margin-bottom: var(--etch-space-12);
+  padding: var(--etch-stroke-frame-thin);
+  background: var(--etch-metal);
+  box-shadow: var(--etch-bevel);
+}
+.md-content::before {
+  /* "comb" engraving: hatched filler cell, decoration only */
+  content: "";
+  display: block;
+  height: var(--etch-space-6);
+  margin-bottom: var(--etch-stroke-rail);
+  background:
+    repeating-linear-gradient(90deg, var(--etch-trace) 0 var(--etch-stroke-hair), transparent var(--etch-stroke-hair) 5px),
+    var(--etch-cell);
+  box-shadow: var(--etch-cut);
+}
+.md-content > .md-content__inner {
+  margin: 0 !important; /* Material sets side margins with higher specificity */
+  padding: var(--etch-space-6) var(--etch-space-6) var(--etch-space-8);
+  background: var(--etch-cell);
+  box-shadow: var(--etch-cut);
+}
+.md-content__inner::before { display: none; }
+.md-content__inner > :first-child { margin-top: 0; }
+@media screen and (min-width: 76.25em) {
+  .md-content__inner { padding: var(--etch-space-8) var(--etch-space-12) var(--etch-space-12); }
+}
+
+/* ── Type ───────────────────────────────────────────────── */
+.md-typeset {
+  font-size: 15px;
+  line-height: 22px;
+  font-feature-settings: "tnum" 0;
+}
+.md-typeset h1 {
+  font-size: 40px; line-height: 44px; font-weight: 600; letter-spacing: -0.025em;
+  color: var(--etch-ink); margin: 0 0 var(--etch-space-6);
+}
+.md-typeset h2 {
+  font-size: 24px; line-height: 30px; font-weight: 600; letter-spacing: -0.015em;
+  margin: var(--etch-space-8) 0 var(--etch-space-3);
+}
+.md-typeset h3 {
+  font-size: 17px; line-height: 24px; font-weight: 600; letter-spacing: -0.005em;
+  margin: var(--etch-space-6) 0 var(--etch-space-2);
+}
+.md-typeset h4, .md-typeset h5, .md-typeset h6 {
+  font-family: var(--font-etch-mono); font-size: 12px; line-height: 16px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--etch-ink-muted);
+}
+@media screen and (max-width: 44.9375em) {
+  .md-typeset h1 { font-size: 32px; line-height: 36px; }
+}
+.md-typeset a {
+  color: var(--etch-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--etch-edge);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color var(--etch-duration) linear;
+}
+.md-typeset a:hover, .md-typeset a:focus-visible { color: var(--etch-ink); text-decoration-color: var(--etch-ink); }
+.md-typeset .headerlink { text-decoration: none; color: var(--etch-ink-faint); }
+.md-typeset hr { border-bottom: var(--etch-stroke-hair) solid var(--etch-trace-faint); }
+.md-typeset blockquote { border-left: var(--etch-stroke-ring) solid var(--etch-edge); color: var(--etch-ink-muted); }
+
+/* Code: silkscreen */
+.md-typeset code, .md-typeset kbd, .md-typeset pre { font-family: var(--font-etch-mono); }
+.md-typeset code { font-size: 13px; }
+.md-typeset .highlight :is(.k, .kd, .kn, .kr, .kc, .nf, .nc) { font-weight: 600; }
+.md-content__inner > .highlight > pre,
+.md-content__inner > pre { margin-left: 0; margin-right: 0; } /* Material pulls these to the screen edge on phones */
+.md-typeset pre > code {
+  background: var(--etch-void);
+  border: var(--etch-stroke-edge) solid var(--etch-trace-faint);
+}
+
+/* Tables */
+.md-typeset table:not([class]) {
+  font-size: 13px; line-height: 20px;
+  border: var(--etch-stroke-edge) solid var(--etch-edge);
+  box-shadow: none;
+}
+.md-typeset table:not([class]) th {
+  font-family: var(--font-etch-mono); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--etch-ink-muted); background: var(--etch-cell-active);
+}
+.md-typeset table:not([class]) td { border-top: var(--etch-stroke-hair) solid var(--etch-trace-faint); }
+
+/* ── Admonitions: etched boxes; colour only as a signal word ── */
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 15px;
+  background: var(--etch-cell);
+  border: var(--etch-stroke-edge) solid var(--etch-edge) !important;
+  box-shadow: none;
+}
+.md-typeset .admonition-title,
+.md-typeset summary {
+  font-family: var(--font-etch-mono);
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--etch-ink-muted);
+  background: var(--etch-cell-active) !important;
+  border: 0 !important;
+}
+.md-typeset .admonition-title::before,
+.md-typeset summary::before { background-color: currentColor !important; }
+.md-typeset summary::after { background-color: currentColor; }
+.md-typeset :is(.warning, .caution, .attention) > :is(.admonition-title, summary) { color: var(--etch-heat); }
+.md-typeset :is(.danger, .error, .failure, .fail, .missing, .bug) > :is(.admonition-title, summary) { color: var(--etch-fault); }
+
+/* ── Navigation: silkscreen labels ──────────────────────── */
+.md-nav { font-size: 13px; line-height: 20px; }
+.md-nav__title,
+.md-nav__item--section > .md-nav__link {
+  font-family: var(--font-etch-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--etch-ink-muted);
+}
+.md-nav__link { color: var(--etch-ink-muted); transition: color var(--etch-duration) linear; }
+.md-nav__link:hover, .md-nav__link:focus-visible { color: var(--etch-ink); }
+.md-nav__link--active, .md-nav__item .md-nav__link--active { color: var(--etch-ink); font-weight: 600; }
+.md-nav--primary .md-nav__title[for="__drawer"] { background: var(--etch-void); color: var(--etch-ink); }
+.md-sidebar__scrollwrap { scrollbar-color: var(--etch-trace) transparent; }
+
+/* ── Search ─────────────────────────────────────────────── */
+.md-search__form {
+  background: var(--etch-cell);
+  box-shadow: inset 0 0 0 var(--etch-stroke-edge) var(--etch-edge);
+  transition: background-color var(--etch-duration) linear;
+}
+.md-search__form:hover { background: var(--etch-cell-hover); }
+.md-search__input { font-family: var(--font-etch-sans); font-size: 15px; color: var(--etch-ink); }
+.md-search__input::placeholder { color: var(--etch-ink-faint); }
+.md-search__output { background: var(--etch-cell); }
+.md-search-result__meta {
+  font-family: var(--font-etch-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--etch-ink-muted); background: var(--etch-cell-active);
+}
+.md-search-result mark { color: var(--etch-ink); text-decoration: underline; }
+
+/* Back-to-top: a plated control (metal means on/active) */
+.md-top {
+  font-family: var(--font-etch-sans);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--etch-on-metal);
+  background: var(--etch-plate);
+  border: var(--etch-stroke-edge) solid var(--etch-metal-lo);
+  box-shadow: var(--etch-bevel);
+}
+.md-top:hover { color: var(--etch-on-metal); background: var(--etch-plate); filter: brightness(1.06); }
+
+/* ── Focus: square ring, ink on a void gap ──────────────── */
+:focus-visible { outline: var(--etch-stroke-ring) solid var(--etch-ink); outline-offset: var(--etch-stroke-ring); }
+
+/* ── Motion and forced colours ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+@media (forced-colors: active) {
+  .md-content { border: var(--etch-stroke-ring) solid CanvasText; }
+  .md-content::before { display: none; }
+  .md-content__inner { border: var(--etch-stroke-edge) solid CanvasText; }
+  :focus-visible { outline-color: Highlight; }
+}
+
+@media print {
+  .md-content, .md-content::before, .md-content__inner { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}

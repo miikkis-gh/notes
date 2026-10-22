@@ -11,17 +11,23 @@ theme:
     - navigation.top
     - search.highlight
     - content.code.copy
+  font: false
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Tumma tila
+    # Etch: Dark (silver on black) is the default, Light (aluminium) the alternative
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Vaalea tila
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Tumma tila
 
 markdown_extensions:
   - admonition
@@ -37,3 +43,6 @@ markdown_extensions:
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
 
+
+extra_css:
+  - stylesheets/etch.css

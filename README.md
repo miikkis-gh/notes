@@ -28,3 +28,7 @@ Built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https
 
 - MkDocs: <https://www.mkdocs.org/user-guide/>
 - Material for MkDocs: <https://squidfunk.github.io/mkdocs-material/reference/>
+
+## Appearance
+
+The site uses the **Etch** design system: `docs/stylesheets/etch.css` holds Etch's colour, type, spacing and stroke tokens and maps Material's variables onto them (Dark = Material's `slate` scheme, Light = `default`). The Geist and Geist Mono fonts are in `docs/fonts/` under the SIL Open Font License (`docs/fonts/OFL.txt`); `font: false` in `mkdocs.yml` stops Material loading Google Fonts.
